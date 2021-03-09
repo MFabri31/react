@@ -2,6 +2,10 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Components from "./components/Components";
+import Propertys from "./components/Propertys";
+import State from "./components/State";
+import ConditionalRendering from "./components/ConditionalRendering";
+
 function App() {
   return (
     <>
@@ -23,6 +27,23 @@ function App() {
           </section>
           <section>
             <Components message="Component" />
+            <hr />
+            <Propertys
+              string="Cadena"
+              number={15}
+              boolean={true}
+              array={[1, 2, 3]}
+              object={{ name: "Paul", email: "correo@correo.com" }}
+              function={(num) => num * num}
+              reactElement={<i>React Element</i>}
+              reactComponent={
+                <Components message="Componente pasado como prop" />
+              }
+            />
+            <hr />
+            <State />
+            <hr />
+            <ConditionalRendering />
           </section>
         </header>
       </div>

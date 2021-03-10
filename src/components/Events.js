@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Events extends Component {
+export class EventsEs6 extends Component {
   constructor(props) {
     super(props);
 
@@ -19,7 +19,10 @@ class Events extends Component {
     });
   }
 
-  substraction() {
+  substraction(e) {
+    if (this.state.count < 1) {
+      return;
+    }
     this.setState({
       count: this.state.count - 1,
     });
@@ -34,7 +37,7 @@ class Events extends Component {
   render() {
     return (
       <div>
-        <h3>Evenetos en Componentes de clase</h3>
+        <h3>Evenetos en Componentes de clase ES6</h3>
         <div>
           <button onClick={this.addition}>+</button>
           <button onClick={this.substraction}>-</button>
@@ -46,4 +49,44 @@ class Events extends Component {
   }
 }
 
-export default Events;
+// Property Initializers
+export class EventsEs7 extends Component {
+  state = {
+    count: 0,
+  };
+
+  addition = (e) => {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  };
+
+  substraction = (e) => {
+    if (this.state.count < 1) {
+      return;
+    }
+    this.setState({
+      count: this.state.count - 1,
+    });
+  };
+
+  resetCounter = (e) => {
+    this.setState({
+      count: 0,
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <h3>Evenetos en Componentes de clase ES7</h3>
+        <div>
+          <button onClick={this.addition}>+</button>
+          <button onClick={this.substraction}>-</button>
+          <button onClick={this.resetCounter}>Reset</button>
+        </div>
+        <p>{this.state.count}</p>
+      </div>
+    );
+  }
+}

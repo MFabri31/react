@@ -6,7 +6,7 @@ import Propertys from "./components/Propertys";
 import State from "./components/State";
 import ConditionalRendering from "./components/ConditionalRendering";
 import ElementRendering from "./components/ElementRendering";
-import { EventsEs6, EventsEs7 } from "./components/Events";
+import { EventsEs6, EventsEs7, MoreAboutEvents } from "./components/Events";
 
 function App() {
   return (
@@ -52,6 +52,8 @@ function App() {
             <EventsEs6 />
             <hr />
             <EventsEs7 />
+            <hr />
+            <MoreAboutEvents />
           </section>
         </header>
       </div>

@@ -90,3 +90,39 @@ export class EventsEs7 extends Component {
     );
   }
 }
+
+// function Button({ myOnClick }) {
+//   return <button onClick={myOnClick}>Button</button>;
+// }
+
+const Button = ({ myOnClick }) => <button onClick={myOnClick}>Button</button>;
+
+export class MoreAboutEvents extends Component {
+  handleClick = (e, message) => {
+    console.log(e);
+    console.log(e.nativeEvent);
+    console.log(e.target);
+    console.log(e.nativeEvent.target);
+    console.log(message);
+  };
+
+  render() {
+    return (
+      <div>
+        <h2>Más sobre eventos</h2>
+        <button
+          onClick={(e) => this.handleClick(e, "parámetro desde un evento")}
+        >
+          Saludar
+        </button>
+        {/* Evento personalizado */}
+        {/* <Button
+          onClick={(e) => this.handleClick(e, "parámetro desde un evento")}
+        /> */}
+        <Button
+          myOnClick={(e) => this.handleClick(e, "parámetro desde un evento")}
+        />
+      </div>
+    );
+  }
+}

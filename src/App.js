@@ -8,6 +8,7 @@ import ConditionalRendering from "./components/ConditionalRendering";
 import ElementRendering from "./components/ElementRendering";
 import { EventsEs6, EventsEs7, MoreAboutEvents } from "./components/Events";
 import ComponentCommunication from "./components/ComponentCommunication";
+import LifeCycle from "./components/LifeCycle";
 
 function App() {
   return (
@@ -57,6 +58,8 @@ function App() {
             <MoreAboutEvents />
             <hr />
             <ComponentCommunication />
+            <hr />
+            <LifeCycle />
           </section>
         </header>
       </div>

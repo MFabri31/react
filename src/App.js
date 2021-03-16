@@ -9,6 +9,7 @@ import ElementRendering from "./components/ElementRendering";
 import { EventsEs6, EventsEs7, MoreAboutEvents } from "./components/Events";
 import ComponentCommunication from "./components/ComponentCommunication";
 import LifeCycle from "./components/LifeCycle";
+import AjaxApis from "./components/AjaxApis";
 
 function App() {
   return (
@@ -60,6 +61,8 @@ function App() {
             <ComponentCommunication />
             <hr />
             <LifeCycle />
+            <hr />
+            <AjaxApis />
           </section>
         </header>
       </div>

@@ -10,6 +10,7 @@ import { EventsEs6, EventsEs7, MoreAboutEvents } from "./components/Events";
 import ComponentCommunication from "./components/ComponentCommunication";
 import LifeCycle from "./components/LifeCycle";
 import AjaxApis from "./components/AjaxApis";
+import HookCounter from "./components/HookCounter";
 
 function App() {
   return (
@@ -62,7 +63,9 @@ function App() {
             <hr />
             <LifeCycle />
             <hr />
-            <AjaxApis />
+            {/* <AjaxApis /> */}
+            <hr />
+            <HookCounter title="Contado de segundos" />
           </section>
         </header>
       </div>

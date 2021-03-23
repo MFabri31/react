@@ -11,6 +11,8 @@ import ComponentCommunication from "./components/ComponentCommunication";
 import LifeCycle from "./components/LifeCycle";
 import AjaxApis from "./components/AjaxApis";
 import HookCounter from "./components/HookCounter";
+import ScrollHook from "./components/ScrollHook";
+import ClockHook from "./components/ClockHook";
 
 function App() {
   return (
@@ -65,7 +67,11 @@ function App() {
             <hr />
             {/* <AjaxApis /> */}
             <hr />
-            <HookCounter title="Contado de segundos" />
+            <HookCounter title="Contador de segundos" />
+            <hr />
+            <ScrollHook />
+            <hr />
+            <ClockHook />
           </section>
         </header>
       </div>

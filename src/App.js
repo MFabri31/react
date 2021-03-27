@@ -13,6 +13,7 @@ import AjaxApis from "./components/AjaxApis";
 import HookCounter from "./components/HookCounter";
 import ScrollHook from "./components/ScrollHook";
 import ClockHook from "./components/ClockHook";
+import AjaxHook from "./components/AjaxHook";
 
 function App() {
   return (
@@ -72,6 +73,8 @@ function App() {
             <ScrollHook />
             <hr />
             <ClockHook />
+            <hr />
+            <AjaxHook />
           </section>
         </header>
       </div>

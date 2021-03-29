@@ -14,6 +14,7 @@ import HookCounter from "./components/HookCounter";
 import ScrollHook from "./components/ScrollHook";
 import ClockHook from "./components/ClockHook";
 import AjaxHook from "./components/AjaxHook";
+import CustomHooks from "./components/CustomHooks";
 
 function App() {
   return (
@@ -74,7 +75,8 @@ function App() {
             <hr />
             <ClockHook />
             <hr />
-            <AjaxHook />
+            {/* <AjaxHook /> */}
+            <CustomHooks />
           </section>
         </header>
       </div>

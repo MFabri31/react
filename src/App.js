@@ -19,6 +19,9 @@ import References from "./components/References";
 import Forms from "./components/Forms";
 import Styles from "./components/Styles";
 import StyledComponents from "./components/StyledComponents";
+import SelectNested from "./components/SelectNested";
+import ContactForm from "./components/ContactForm";
+import Modals from "./components/Modals";
 
 function App() {
   return (
@@ -89,6 +92,12 @@ function App() {
             <Styles />
             <hr />
             <StyledComponents />
+            <hr />
+            <SelectNested />
+            <hr />
+            <ContactForm />
+            <hr />
+            <Modals />
           </section>
         </header>
       </div>

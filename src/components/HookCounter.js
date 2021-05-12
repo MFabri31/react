@@ -7,9 +7,8 @@ const HookCounter = (props) => {
   const addition = () => setCount(count + 1);
 
   const substraction = () => {
-    if (count < 1) {
-      return;
-    }
+    if (count < 1) return;
+
     setCount(count - 1);
   };
 

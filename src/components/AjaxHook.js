@@ -12,6 +12,8 @@ const Pokemon = ({ avatar, name }) => {
 const AjaxHook = () => {
   const [pokemons, setPokemons] = useState([]);
 
+  let url = "https://pokeapi.co/api/v2/pokemon/";
+
   // useEffect(() => {
   //   let url = "https://pokeapi.co/api/v2/pokemon/";
 
@@ -60,14 +62,13 @@ const AjaxHook = () => {
       });
     };
 
-    getPokemons("https://pokeapi.co/api/v2/pokemon/");
-  }, []);
+    getPokemons(url);
+  }, [url]);
 
   return (
     <>
       <h3>Peticiones Asíncronas en Hooks</h3>
       <h4>Pokemones</h4>
-
       {pokemons.length === 0 ? (
         <h3>Cargando...</h3>
       ) : (

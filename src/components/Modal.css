@@ -1,0 +1,39 @@
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* 
+cuando en elemento tenga la clase modal y adicionalmente la clase is-open se aplica d-flex
+*/
+.modal.is-open {
+  display: flex;
+}
+
+.modal-container {
+  position: relative;
+  min-width: 320px;
+  max-width: 480px;
+  min-height: 200px;
+  max-height: 600px;
+  padding: 0.5em;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #444;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}

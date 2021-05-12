@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
 class Clock extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentWillUnmount() {
     console.log(3, "El componente han eliminado del DOM");

@@ -2,11 +2,13 @@ import React from "react";
 import Modal from "./Modal";
 import { useModal } from "../Hooks/useModal";
 import ContactForm from "./ContactForm";
+import ModalPortal from "./ModalPortal";
 
 const Modals = () => {
   const [isOpen1, openModal1, closeModal1] = useModal(false);
   const [isOpen2, openModal2, closeModal2] = useModal(false);
   const [isOpenContact, openModalContact, closeModalContact] = useModal(false);
+  const [isOpenPortal, openModalPortal, closeModalPortal] = useModal(false);
 
   return (
     <div>
@@ -14,6 +16,7 @@ const Modals = () => {
       <button onClick={openModal1}>Modal 1</button>
       <button onClick={openModal2}>Modal 2</button>
       <button onClick={openModalContact}>Modal Contact</button>
+      <button onClick={openModalPortal}>Modal Portal</button>
       <Modal isOpen={isOpen1} closeModal={closeModal1}>
         <h1>Modal 1</h1>
         <p>
@@ -35,7 +38,6 @@ const Modals = () => {
       </Modal>
       <Modal isOpen={isOpen2} closeModal={closeModal2}>
         <h1>Modal 2</h1>
-        <i class="fas fa-solar-panel"></i>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
           iusto consequatur rem veritatis ratione. In animi nam cupiditate, cum
@@ -46,6 +48,14 @@ const Modals = () => {
       <Modal isOpen={isOpenContact} closeModal={closeModalContact}>
         <ContactForm />
       </Modal>
+      <ModalPortal isOpen={isOpenPortal} closeModal={closeModalPortal}>
+        <h1>Modal en Portal</h1>
+        <p>
+          Contenido de modal que carga en otro nodo del DOM diferente a donde
+          carga la app de React.
+        </p>
+        <img src="https://placeimg.com/400/400/people" alt="modal-image" />
+      </ModalPortal>
     </div>
   );
 };
